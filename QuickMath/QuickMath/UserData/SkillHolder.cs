@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickMath.UserData
+namespace QuickMath.UserData                             
 {
     internal class SkillHolder
     {
+        private int level;
+        private int exp;
     }
-}
+} 
