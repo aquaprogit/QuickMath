@@ -10,5 +10,8 @@ namespace QuickMath.UserData
     {
         private int level;
         private int exp;
+
+        public int Level { get; private set; }
+        public int Exp { get; set; }
     }
 } 
