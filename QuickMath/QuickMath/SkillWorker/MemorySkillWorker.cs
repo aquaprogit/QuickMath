@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Media;
 using QuickMath.UserData;
 
 namespace QuickMath.SkillWorker
@@ -18,20 +18,25 @@ namespace QuickMath.SkillWorker
         private SkillHolder MemorySkillHolder;
         public void CheckAnswer(string question, string userAnswer)
         {
-            //Сверить число из вопроса и ответ пользователя
-            //Если равны то Right++ если нет, Wrong++
+            if (question == userAnswer)
+                Right++;
+            else
+                Wrong++;
         }
 
         public string GetQuestion()
         {
-            string question = "";
-            /*
-             * Сгенерировать 4-значное число если Level от [1 до 3]
-             * 5-значное если от (3 - 7]
-             * 6- значное если от (7 до 10]
-             * 7-значное если больше 10
-            */
-            return question;
+            int question;
+            Random r = new Random();
+            if (Level <= 3)
+                question = r.Next(1000, 10000);
+            else if (Level < 7)
+                question = r.Next(10000, 100000);
+            else if (Level <10)
+                question = r.Next(100000, 1000000);
+            else
+                question = r.Next(1000000, 10000000);
+            return question.ToString();
         }
 
         public MemorySkillWorker(SkillHolder memSkillHolder)

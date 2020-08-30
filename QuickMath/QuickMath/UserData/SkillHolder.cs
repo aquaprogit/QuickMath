@@ -11,7 +11,7 @@ namespace QuickMath.UserData
     internal class SkillHolder : INotifyPropertyChanged
     {
         private const int targetExp = 100;
-        private int level = 1;
+        private int level = 0;
         private int exp = 0;
 
         public int Level

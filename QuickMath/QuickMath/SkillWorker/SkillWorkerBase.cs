@@ -8,7 +8,6 @@ namespace QuickMath.SkillWorker
 {
     abstract class SkillWorkerBase
     {
-        public int Level { get; protected set; }
         public int Right { get; protected set; }
         public int Wrong { get; protected set; }
         public double Mark
