@@ -35,7 +35,7 @@ namespace QuickMath.UserData
                         Level++;
                     } while (exp >= targetExp);
                 }
-                else if (exp < 0)
+                else if (exp < 0 && level >= 1)
                 {
                     do
                     {

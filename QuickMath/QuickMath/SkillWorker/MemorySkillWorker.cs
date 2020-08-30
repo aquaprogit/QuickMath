@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace QuickMath.SkillWorker
 {
-    class MemorySkillWorker
+    class MemorySkillWorker : SkillWorkerBase, ISkillWorker
     {
+        public void CheckAnswer(string question, string userAnswer)
+        {
+            
+        }
+
+        public string GetQuestion()
+        {
+            string question = "";
+
+
+            return question;
+        }
     }
 }
