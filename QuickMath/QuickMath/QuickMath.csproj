@@ -63,6 +63,7 @@
     <Compile Include="SkillWorker\ISkillWorker.cs" />
     <Compile Include="SkillWorker\MathSkillWorker.cs" />
     <Compile Include="SkillWorker\MemorySkillWorker.cs" />
+    <Compile Include="SkillWorker\SkillWorkerBase.cs" />
     <Compile Include="UserData\SkillHolder.cs" />
     <Compile Include="UserData\User.cs" />
   </ItemGroup>

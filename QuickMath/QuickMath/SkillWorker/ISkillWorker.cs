@@ -8,5 +8,8 @@ namespace QuickMath.SkillWorker
 {
     interface ISkillWorker
     {
+        string GetQuestion();
+
+        void CheckAnswer(string question, string userAnswer);
     }
 }
