@@ -11,11 +11,6 @@ namespace QuickMath.SkillWorker
 {
     class MemorySkillWorker : SkillWorkerBase, ISkillWorker
     {
-        private int Level
-        {
-            get => MemorySkillHolder.Level;
-        }
-        private SkillHolder MemorySkillHolder;
         public void CheckAnswer(string question, string userAnswer)
         {
             if (question == userAnswer)
@@ -39,9 +34,6 @@ namespace QuickMath.SkillWorker
             return question.ToString();
         }
 
-        public MemorySkillWorker(SkillHolder memSkillHolder)
-        {
-            MemorySkillHolder = memSkillHolder;
-        }
+        public MemorySkillWorker(SkillHolder SkillHolder) : base(SkillHolder) { }
     }
 }

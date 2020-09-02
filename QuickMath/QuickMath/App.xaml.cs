@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -19,9 +20,6 @@ namespace QuickMath
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            MemorySkillWorker memorySkillWorker = new MemorySkillWorker(new SkillHolder() {Exp = 300});
-            Debug.WriteLine(memorySkillWorker.GetQuestion());
-
 
 
         }

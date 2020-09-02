@@ -16,6 +16,18 @@ namespace QuickMath.Resources
         {
             return coll.Contains(self);
         }
-
+        public static int IndexOf(this string self, params char[] chars)
+        {
+            if (self.ToArray().Any(c => c.IsOneOf(chars)) == false) return -1;
+            for (int i = 0; i < self.Length; i++)
+            {
+                for (int j = 0; j < chars.Length; j++)
+                {
+                    if (self[i] == chars[i])
+                        return i;
+                }
+            }
+            return -1;
+        }
     }
 }
